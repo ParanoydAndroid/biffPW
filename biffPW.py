@@ -2,8 +2,8 @@ import itertools
 
 
 def main():
-    base_string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    permutations = itertools.permutations(base_string, 3)
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    permutations = itertools.permutations(alphabet, 3)
     count = 0
 
     with open('biff_passwords.txt', 'a+') as f:
@@ -20,7 +20,7 @@ def main():
                 f.write(candidate)
                 f.write('\n')
 
-                count += count
+                count += 1
                 print(f'Processed password {count}: {candidate}\n')
 
 
